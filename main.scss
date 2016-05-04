@@ -1,0 +1,62 @@
+---
+---
+
+$blue: #0074d9;
+$brown: #644702;
+$light-brown: #e6dfd2;
+
+body {
+  margin: 0 auto;
+  padding: 20px 10px 20px 10px;
+  max-width: 600px;
+  background: #f7f3eb;
+  text-align: center;
+  line-height: 1.4em;
+  font-family: 'Merriweather', serif;
+  color: $brown;
+  // border: 1px solid blue;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+a {
+  color: $blue;
+}
+
+ul {
+  margin: 1em 0;
+  margin-bottom: 2em;
+  padding: 0;
+  list-style: none;
+  
+  li {
+    margin-bottom: 0.7em;
+  }
+}
+
+hr {
+  border: 1px solid $light-brown;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px $brown;
+}
+
+.bio {
+  margin-bottom: 1.5em;
+  line-height: 1.7em;
+}
