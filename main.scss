@@ -72,7 +72,7 @@ hr {
   text-align: center;
   
   h2 {
-    margin-top: 0.70em;
+    margin-top: 0.8em;
   }
   
   ul {
@@ -80,8 +80,8 @@ hr {
     list-style: none;
     
     li {
-      margin-bottom: 0.2em;
-      line-height: 1.7em;
+      margin-bottom: 0.7em;
+      line-height: 1.4em;
     }
   }
   
@@ -95,15 +95,13 @@ hr {
   
   li.mobile-separator {
     display: none;
-  }
-  
-  @media (max-width: 500px) {
-    li.mobile-separator {
+    margin: 0;
+    line-height: 0.7em;
+    font-size: 30px;
+    color: $light-brown;
+    
+    @media (max-width: 500px) {
       display: block;
-      margin: 0 0 -0.3em 0;
-      line-height: 1.0em;
-      font-size: 30px;
-      color: $light-brown;
     }
   }
 }
