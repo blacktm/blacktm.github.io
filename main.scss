@@ -41,6 +41,14 @@ a {
   color: $blue;
 }
 
+a.back {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 ul {
   margin-top: 0.7em;
   margin-bottom: 1.5em;
@@ -52,6 +60,12 @@ ul {
 
 hr {
   border: 1px solid $light-brown;
+}
+
+@media (max-width: 500px) {
+  p, ul {
+    font-size: 20px;
+  }
 }
 
 .home {
@@ -114,13 +128,5 @@ hr {
     .break.collapse {
       height: 0;
     }
-  }
-}
-
-a.back {
-  text-decoration: none;
-  
-  &:hover {
-    text-decoration: underline;
   }
 }
