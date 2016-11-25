@@ -21,7 +21,7 @@ Since 2013, I’ve been in the federal government helping build and grow our [di
 
 ## Healthcare
 
-Our healthcare system in the United States is far from what it could be, in delivery, outcomes, and cost. I believe design thinking and the proper application of digital technologies will be critical in creating the human-centered and value-based system we all envision.
+Our healthcare system in the United States is far from what it could be in delivery, outcomes, and cost. I believe design thinking and the proper application of digital technologies will be critical in creating the human-centered and value-based system we all envision.
 
 Since 2010, I've been a healthcare entrepreneur, consultant, software developer, and designer. While working in government, I've been an advisor to the [Office of the National Coordinator for Health IT](https://www.healthit.gov) at the Dept. of Health and Human Services (HHS), most recently leading a product strategy and design research engagement with the [Consumer eHealth Program](/gov#18f-onc-ceh) and as a member of the review panel for the [Provider User Experience Challenge](http://www.hhs.gov/about/news/2016/07/18/onc-announces-phase-1-winners-consumer-health-data-aggregator-and-provider-user-experience.html).
 
