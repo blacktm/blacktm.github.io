@@ -135,7 +135,7 @@ Fix C
 Because the remote feature branch history has been changed, force push the branch:
 
 ```
-git push --force origin <feature_branch
+git push --force origin <feature_branch>
 ```
 
 ## Rebasing
