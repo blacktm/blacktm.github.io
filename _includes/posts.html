@@ -1,0 +1,19 @@
+
+{% for post in site.posts %}
+  <article class="post-excerpt">
+    <header>
+      <h2>
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          {{ post.title }}
+        </a>
+      </h2>
+    </header>
+    
+    {% include post-meta.html param=post %}
+    
+    <div class="post-content">
+      {{ post.excerpt }}
+    </div>
+    <a href="{{ post.url | prepend: site.baseurl }}">Read More...</a>
+  </article>
+{% endfor %}

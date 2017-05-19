@@ -1,0 +1,24 @@
+---
+layout: main
+---
+
+{% if page.categories contains 'game dev' %}
+  <a href="/blog/game-dev" class="back">← game dev blog</a>
+{% else %}
+  <a href="/blog" class="back">← blog</a>
+{% endif %}
+
+<div class="content">
+  <div class="post">
+    
+    <header class="post-header">
+      <h1>{{ page.title }}</h1>
+      {% include post-meta.html param=page %}
+    </header>
+    
+    <article class="post-content">
+      {{ content }}
+    </article>
+    
+  </div>
+</div>
