@@ -47,7 +47,7 @@ int main() {
 
 Compile and run with:
 
-```terminal
+```
 cc window.m -framework Cocoa -o window
 ./window
 ```
@@ -90,7 +90,7 @@ int main() {
 
 Compile and run with:
 
-```terminal
+```
 cc hello_sdl.c -lSDL2 -o hello_sdl
 ./hello_sdl
 ```
