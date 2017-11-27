@@ -103,7 +103,7 @@ For more, watch [Ryan C. Gordon's](https://twitter.com/icculus) talk on [Game De
 
 ---
 
-**OpenGL and the rendering pipeline**. Read about [the pipeline](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview), and here's a good ["hello triangle" tutorial](https://developer.apple.com/documentation/metal/hello_triangle) by Apple on their similar graphics API called Metal. Pretty soon, you might feel [like this](https://twitter.com/floatvoid/status/863605150799118336). Also, we'll use an [orthographic projection](https://en.wikipedia.org/wiki/Orthographic_projection) here.
+**OpenGL and the rendering pipeline.** Read about [the pipeline](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview), and here's a good ["hello triangle" tutorial](https://developer.apple.com/documentation/metal/hello_triangle) by Apple on their similar graphics API called Metal. Pretty soon, you might feel [like this](https://twitter.com/floatvoid/status/863605150799118336). Also, we'll use an [orthographic projection](https://en.wikipedia.org/wiki/Orthographic_projection) here.
 
 ---
 
@@ -115,7 +115,7 @@ For more, watch [Ryan C. Gordon's](https://twitter.com/icculus) talk on [Game De
 
 ---
 
-**Native extensions**. Here's the MRI (CRuby) and MRuby [native extension](https://github.com/ruby2d/ruby2d/blob/master/ext/ruby2d/ruby2d.c) we'll use to interact with Simple 2D.
+**Native extensions.** Here's the MRI (CRuby) and MRuby [native extension](https://github.com/ruby2d/ruby2d/blob/master/ext/ruby2d/ruby2d.c) we'll use to interact with Simple 2D.
 
 ---
 
@@ -139,7 +139,7 @@ Check out the [MRuby iOS and tvOS](https://github.com/ruby2d/mruby-frameworks) f
 
 ---
 
-## Previous Ruby game dev talks
+**Previous Ruby game dev talks**
 
 - [Building Games with Ruby](https://www.youtube.com/watch?v=_KCnl5EhcdA) — RubyConf 2007 (and [Ruby Hoedown 2007](https://www.youtube.com/watch?v=1IZMRrEhf_c)), Andrea O. K. Wright
 - [Writing 2D Games for the OSX Platform in Ruby](https://www.youtube.com/watch?v=UESfvIoXo0M) — RubyConf 2009, Matt Aimonetti
