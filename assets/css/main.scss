@@ -7,16 +7,15 @@ body {
   @extend .black-80;
 }
 
+h1 { @extend .f2; }
+h2 { @extend .f3; }
+h3 { @extend .f4; }
+li { @extend .pb2; }
 p, li, strong {
   @extend .f4, .f5-ns;
   line-height: 1.4;
 }
-
-h1 { @extend .f2; }
-h2 { @extend .f3; }
-h3 { @extend .f4; }
 a { @extend .blue; }
-li { @extend .pb2; }
 
 hr {
   @extend .bg-black-10;
@@ -80,14 +79,19 @@ article {
 
 code {
   @extend .pa1, .pb0, .ba, .bw1, .b--black-10, .br2;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 15px;
   word-wrap: break-word;
-  background: rgba(0, 0, 0, 0.02);
+  background: rgb(250, 250, 250);
 }
 
 pre {
+  @extend .br2;
+
   code {
-    @extend .lh-copy, .db, .overflow-y-auto;
+    @extend .pa2, .lh-copy, .db, .overflow-y-auto;
     word-wrap: normal;
+    background: #1e2832;
 
     /* long code snippets */
 
@@ -102,7 +106,7 @@ pre {
     }
 
     &::-webkit-scrollbar-thumb {
-      @extend .bg-black-20;
+      @extend .bg-white-40;
       border-bottom-left-radius: .15rem;
       border-bottom-right-radius: .15rem;
     }
