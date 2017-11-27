@@ -78,7 +78,8 @@ article {
 // Code ////////////////////////////////////////////////////////////////////////
 
 code {
-  @extend .pa1, .pb0, .ba, .bw1, .b--black-10, .br2;
+  @extend .pb0, .ba, .bw1, .b--black-10, .br2;
+  padding: 0 4px;
   font-family: 'Source Code Pro', monospace;
   font-size: 15px;
   word-wrap: break-word;
