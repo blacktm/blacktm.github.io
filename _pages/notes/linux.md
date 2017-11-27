@@ -8,63 +8,38 @@ title: Linux
 
 ## Packages
 
-**Update installed packages**
+```bash
+# Update installed packages
+sudo apt update
+sudo apt full-upgrade
 
-```
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
-sudo apt-get install -y <package>
-```
+# Search for available package
+apt search <package>
 
-**Search for available package**
+# List installed packages
+apt list --installed
 
-```
-apt-cache search <package>
-```
+# Remove package
+sudo apt remove <package>
 
-**List installed packages**
-
-```
-dpkg --get-selections | grep -v deinstall
-```
-
-**Search for installed package**
-
-```
-dpkg --get-selections | grep -v deinstall | grep <package>
-```
-
-**Remove package**
-
-```
-sudo apt-get --purge remove <package>
-```
-
-**Clean up unneeded packages**
-
-```
-sudo apt-get autoremove
+# Clean up unneeded packages
+sudo apt autoremove
 ```
 
 ## Useful aliases
 
-_In `~/.bashrc`_
+Put these in `~/.bashrc`
 
-**Clear terminal**
-
-```
+```bash
+# Clear terminal
 alias cls='printf "\033c"'
-```
 
-**Changing terminal prompt**
-
-```
+# Changing terminal prompt
 export PS1="\W:$ "
 ```
 
 ## Unmount a drive
 
-```
+```bash
 umount /media/<drive>
 ```
