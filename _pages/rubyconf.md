@@ -7,7 +7,7 @@ layout: main
 
 # RubyConf 2017
 
-These are notes from [my RubyConf 2017 talk](http://rubyconf.org/program#session-189). Enjoy!
+These are notes from [my RubyConf talk](http://rubyconf.org/program#session-189) (video should be posted soon). Enjoy!
 
 Want to get right to making 2D apps in Ruby? Check out [Ruby 2D](http://www.ruby2d.com).
 
@@ -103,7 +103,7 @@ For more, watch [Ryan C. Gordon's](https://twitter.com/icculus) talk on [Game De
 
 ---
 
-**OpenGL and the rendering pipeline**. Read about [the pipeline](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview), and here's a good ["hello triangle" tutorial](https://developer.apple.com/documentation/metal/hello_triangle) by Apple on their similar graphics API called Metal. Pretty soon, you might feel [like this](https://twitter.com/floatvoid/status/863605150799118336). Also, we'll use an [orthographic projection](https://en.wikipedia.org/wiki/Orthographic_projection) here. 
+**OpenGL and the rendering pipeline**. Read about [the pipeline](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview), and here's a good ["hello triangle" tutorial](https://developer.apple.com/documentation/metal/hello_triangle) by Apple on their similar graphics API called Metal. Pretty soon, you might feel [like this](https://twitter.com/floatvoid/status/863605150799118336). Also, we'll use an [orthographic projection](https://en.wikipedia.org/wiki/Orthographic_projection) here.
 
 ---
 
@@ -156,3 +156,10 @@ Check out the [MRuby iOS and tvOS](https://github.com/ruby2d/mruby-frameworks) f
 - [Game Development + Ruby = Happiness](https://www.youtube.com/watch?v=jfTM_0ezZuI) — RubyKaigi 2016, Amir Rajan
 - [Attention Rubyists: you can write video games](https://www.youtube.com/watch?v=bK9RX_CzCeI) — RubyConf 2016, Cory Chamblin
 
+---
+
+**More cool things...**
+
+A great book about [Game Programming Patterns](http://gameprogrammingpatterns.com), a collection of patterns in games that make code cleaner, easier to understand, and faster.
+
+Using [RubyMotion](http://www.rubymotion.com) and [SpriteKit](https://developer.apple.com/spritekit/) to [make iOS games](https://github.com/amirrajan/ios-ruby-game-dev).
