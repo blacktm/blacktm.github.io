@@ -1,7 +1,6 @@
 ---
 title: Work
-layout: main
-css: work
+style: article work
 ---
 
 <a href="/" class="back">← home</a>
