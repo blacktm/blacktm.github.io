@@ -1,6 +1,6 @@
 ---
 title: Work
-style: article work
+style: work
 ---
 
 <a href="/" class="back">← home</a>
