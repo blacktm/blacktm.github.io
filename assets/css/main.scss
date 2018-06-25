@@ -13,7 +13,7 @@ h3 { @extend .f4; }
 li { @extend .pb2; }
 p, li {
   @extend .f4, .f5-ns;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 a { @extend .blue; }
 
@@ -27,7 +27,20 @@ hr {
   margin-top: 3rem;
 }
 
+blockquote {
+  @extend .athelas, .ml0, .pl3, .bl, .bw3, .b--black-20;
+
+  p {
+    @extend .f3, .f4-m, .f4-l;
+  }
+}
+
 .home {
+  .avatar {
+    padding: 0.1rem;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
   .section-header {
     @extend .f3, .bb, .bw2, .pb2, .mb3;
   }
