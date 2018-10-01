@@ -3,8 +3,6 @@ title: Work
 style: work
 ---
 
-<a href="/" class="back">← home</a>
-
 # My work
 
 Learn about my public technology work. So far, my focus has been on [government](#government), [healthcare](#healthcare), and [education](#education).

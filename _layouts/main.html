@@ -9,8 +9,19 @@
     <link rel="apple-touch-icon-precomposed" href="/assets/img/favicon-152.png">
   </head>
 
-  <body class="{{ page.style }} mw7 pa3 center sans-serif mb4">
-    {{ content }}
+  <body>
+    <nav>
+      <div class="ml0-ns ml2"><a class="f2 fw9 link white" href="/">TB</a></div>
+      <div class="fr relative" style="top:-2.14rem">
+        <a class="mr3" href="mailto:tom@blacktm.com"><img src="/assets/img/mail.svg" alt="email"></a>
+        <a class="mr3" href="https://twitter.com/blacktm"><img src="/assets/img/twitter.svg" alt="twitter"></a>
+        <a class="mr2" href="https://github.com/blacktm"><img src="/assets/img/github.svg" alt="github"></a>
+      </div>
+    </nav>
+
+    <main class="{{ page.style }} mw7 mv3 ph3 center">
+      {{ content }}
+    </main>
   </body>
 
   <!-- Google Analytics -->

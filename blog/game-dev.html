@@ -2,8 +2,6 @@
 layout: main
 ---
 
-<a href="/" class="back">← home</a>
-
 <h1>Game dev blog</h1>
 
 {% for post in site.posts %}
@@ -11,17 +9,17 @@ layout: main
     <article class="post-excerpt">
       <header>
         <h2>
-          <a href="{{ post.url | prepend: site.baseurl }}">
+          <a class="link" href="{{ post.url | prepend: site.baseurl }}">
             {{ post.title }}
           </a>
         </h2>
       </header>
-      
+
       <div class="post-meta">
         <img class="post-date-icon" src="/assets/img/calendar.svg" alt="calendar icon">
         <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
       </div>
-      
+
       <div class="post-content">
         {{ post.excerpt }}
       </div>

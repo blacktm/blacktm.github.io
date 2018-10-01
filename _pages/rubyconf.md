@@ -3,8 +3,6 @@ title: RubyConf 2017
 style: slides
 ---
 
-<a href="/" class="back">← home</a>
-
 # RubyConf 2017
 
 Welcome! Below is my talk from RubyConf 2017, ["Reimagining 2D graphics and game development with Ruby"](http://rubyconf.org/program#session-189), presented on November 15th, 2017. It's hard to hear due to audio issues, but you can jump to the slides and notes just below the video. Want to get right to making 2D apps? Check out [Ruby 2D](http://www.ruby2d.com)! If you're interested in contributing, we'd love to have you [get involved](https://github.com/ruby2d/ruby2d#contribute) with the project.
