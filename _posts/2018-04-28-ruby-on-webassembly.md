@@ -2,6 +2,8 @@
 title: Ruby on WebAssembly
 ---
 
+[日本語で読む](https://techracho.bpsinc.jp/hachi8833/2018_08_22/60810) 🇯🇵
+
 _TL;DR: WebAssembly is here! Already familiar with it? [Check out the wasm gem](#the-wasm-ruby-gem) to get started._
 
 Welcome to 2018, where some of the most exciting innovations are happening in the compiler space. Sure, there's things like AR, VR, and machine learning on the bleeding edge, but don't discount those technologies as old as computing itself, the software responsible for translating the source code we write into something the machine can actually understand. Much of this resurgence is thanks to [LLVM](https://llvm.org), the modular compiler infrastructure project. Why is it such a big deal? This [Wired article](https://www.wired.com/2013/07/apple-google-llvm) from 2013 summed it up quite well:
