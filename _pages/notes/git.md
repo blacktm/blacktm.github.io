@@ -144,3 +144,16 @@ git push --force origin <feature_branch>
 # Get changes from master when on a feature branch
 git rebase <repo>/master
 ```
+
+# Update a fork from a remote branch
+
+```
+git clone --recursive <fork_url> <name>
+git remote add upstream <original_url>
+git fetch upstream
+git checkout master
+git rebase upstream/master
+git checkout <pr_branch>
+git rebase master
+# May have to resolve conflicts at this point
+```
