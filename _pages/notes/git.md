@@ -148,12 +148,28 @@ git rebase <repo>/master
 # Update a fork from a remote branch
 
 ```
-git clone --recursive <fork_url> <name>
+git clone --recursive <fork_url> <dir_name>
+cd <dir_name>
 git remote add upstream <original_url>
 git fetch upstream
 git checkout master
 git rebase upstream/master
 git checkout <pr_branch>
 git rebase master
-# May have to resolve conflicts at this point
+# Might have to resolve conflicts at this point
+```
+
+Update with:
+
+```
+git checkout master
+git pull
+git checkout <pr_branch>
+git rebase master
+```
+
+## Amend last commit with current date
+
+```
+git commit --amend --date=now
 ```
