@@ -67,7 +67,7 @@ blockquote {
 
       a {
         @extend .f4, .link;
-        &:hover { text-decoration: underline; }
+        &:hover { @extend .underline; }
       }
     }
     p { @extend .mt0 }

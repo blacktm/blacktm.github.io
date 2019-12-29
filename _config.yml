@@ -3,7 +3,7 @@ kramdown:
   hard_wrap: true
 
 posts_path: /blog
-permalink: "/blog/:title"
+permalink: '/blog/:title'
 
 collections:
   pages:
@@ -12,11 +12,11 @@ collections:
 
 defaults:
   - scope:
-      path: ""
+      path: ''
     values:
       layout: main
   - scope:
-      path: ""
+      path: ''
       type: posts
     values:
       layout: post
