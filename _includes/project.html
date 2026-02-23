@@ -1,0 +1,11 @@
+<div class="project mx-auto mb-2">
+  <div class="sm:flex">
+    <div class="col1 w-full sm:w-1/5 p-0 sm:p-2">
+      <img class="float-left pr-4 mb-2" src="{{ include.img }}">
+    </div>
+    <div class="col2 w-full sm:w-4/5 p-0 sm:p-2">
+      {{ include.name | markdownify }}
+      {{ include.summary | markdownify }}
+    </div>
+  </div>
+</div>

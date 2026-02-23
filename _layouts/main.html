@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tom Black{% unless page.title == 'home' %} — {{ page.title }}{% endunless %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  </head>
+
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    {% unless page.style contains 'home' %}
+    <nav>
+      <div class="nav-inner max-w-3xl px-4 mx-auto">
+        <a class="logo" href="/">Tom Black</a>
+        {% unless page.layout == 'post' or page.url contains '/blog' %}
+        <div class="nav-links">
+          <a href="/blog">Blog</a>
+        </div>
+        {% endunless %}
+      </div>
+    </nav>
+    {% endunless %}
+
+    <main class="{{ page.style }} max-w-3xl my-4 px-4 mx-auto">
+      {{ content }}
+    </main>
+  </body>
+
+  {% include google-analytics.html %}
+</html>
