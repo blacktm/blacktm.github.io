@@ -4,30 +4,39 @@ style: article home
 permalink: /
 ---
 
-<h1>Tom Black</h1>
-<p class="handle"><a href="https://github.com/blacktm">@blacktm</a></p>
-<p class="tagline">Software engineer exploring graphics, systems, and the web.</p>
+<header class="hero">
+  <div class="sphere-col">
+    <div class="sphere-frame">
+      <canvas id="alive" width="64" height="64" tabindex="0" role="button"
+              aria-label="A living 1-bit dithered sphere that fires circuit-board lightning — activate to trigger a strike"></canvas>
+      <noscript><img src="/assets/img/alive-still.png" width="64" height="64" alt="A 1-bit dithered sphere with a turbulent, churning surface"></noscript>
+    </div>
+  </div>
+  <div class="hero-text">
+    <h1><a href="https://github.com/blacktm">@blacktm</a></h1>
+    <p class="tagline">Software engineer exploring graphics, systems, and artificial intelligence</p>
+  </div>
+</header>
 
 <h2 class="section-label">Projects</h2>
 
-<div class="projects-grid">
-  <a class="project-card ruby2d" href="http://www.ruby2d.com">
-    <h3>Ruby 2D</h3>
+<div class="items">
+  <div class="item">
+    <div class="item-row">
+      <h3><a href="https://www.ruby2d.com">Ruby 2D</a></h3>
+      <span class="item-date">ruby2d.com</span>
+    </div>
     <p>A Ruby gem for creating cross-platform 2D applications</p>
-  </a>
-  <a class="project-card" href="https://github.com/simple2d/simple2d">
-    <h3>Simple 2D</h3>
-    <p>A small, native 2D graphics engine</p>
-  </a>
+  </div>
 </div>
 
-<h2 class="section-label">Writing & Talks</h2>
+<h2 class="section-label">Writing &amp; Talks</h2>
 
 <div class="items">
   <div class="item">
     <div class="item-row">
       <h3><a href="/blog/ruby-on-webassembly">Ruby on WebAssembly</a></h3>
-      <span class="item-date">April 2018</span>
+      <span class="item-date">2018-04</span>
     </div>
     <p>What's the big deal with WebAssembly, and what does it mean for Ruby?</p>
   </div>
@@ -35,9 +44,10 @@ permalink: /
   <div class="item">
     <div class="item-row">
       <h3><a href="/rubyconf">Reimagining 2D graphics and game development with Ruby</a></h3>
-      <span class="item-date">Nov 2017</span>
+      <span class="item-date">2017-11</span>
     </div>
     <p>RubyConf 2017</p>
   </div>
-
 </div>
+
+<script src="/assets/js/alive.js" defer></script>

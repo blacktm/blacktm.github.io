@@ -1,5 +1,13 @@
+title: Tom Black
+description: Software engineer exploring graphics, systems, and artificial intelligence
+url: https://www.blacktm.com
+author:
+  name: Tom Black
+
 plugins:
   - jekyll-tailwind
+  - jekyll-feed
+  - jekyll-sitemap
 
 tailwind:
   input: _css/app.css

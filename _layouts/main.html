@@ -4,28 +4,43 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tom Black{% unless page.title == 'home' %} — {{ page.title }}{% endunless %}</title>
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#000000">
+    {% capture full_title %}{{ site.title }}{% unless page.title == 'home' %} — {{ page.title }}{% endunless %}{% endcapture %}
+    {% if page.description %}
+      {% capture description %}{{ page.description }}{% endcapture %}
+    {% elsif page.excerpt %}
+      {% capture description %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 }}{% endcapture %}
+    {% else %}
+      {% capture description %}{{ site.description }}{% endcapture %}
+    {% endif %}
+    <title>{{ full_title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ full_title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/assets/img/avatar.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:alt" content="A 1-bit dithered sphere with a turbulent, churning surface">
+    <meta name="twitter:card" content="summary">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    {% feed_meta %}
   </head>
 
   <body>
-    <div class="grain" aria-hidden="true"></div>
-
     {% unless page.style contains 'home' %}
     <nav>
       <div class="nav-inner max-w-3xl px-4 mx-auto">
-        <a class="logo" href="/">Tom Black</a>
-        {% unless page.layout == 'post' or page.url contains '/blog' %}
-        <div class="nav-links">
-          <a href="/blog">Blog</a>
-        </div>
-        {% endunless %}
+        <a class="logo" href="/">@blacktm</a>
       </div>
     </nav>
     {% endunless %}

@@ -1,5 +1,6 @@
 ---
 title: Ruby on WebAssembly
+description: What's the big deal with WebAssembly, and what does it mean for Ruby?
 ---
 
 [日本語で読む](https://techracho.bpsinc.jp/hachi8833/2018_08_22/60810) 🇯🇵
@@ -18,9 +19,9 @@ What does all this have to do with the web? Well, from the very beginning (1995 
 
 To be a platform on par with your desktop or mobile OS, the browser must free itself from the one language it has ever known. Namely, its programming environment should be defined at a lower level, just like other platforms. It should have its own assembly language, still abstracted from specific hardware, but as close to machine code as possible. This was the goal of [asm.js](https://en.wikipedia.org/wiki/Asm.js), a project started in 2012 to define a subset of JavaScript, restricting it only to concepts which would make it an ideal target language for compilers. This is where the history of LLVM and asm.js come together, and a new tool called [Emscripten](http://emscripten.org), an LLVM-to-JavaScript compiler created by [Alon Zakai](https://twitter.com/kripken), made it all possible. We could now compile programs written in C and C++ to JavaScript, like so:
 
-<div class="text-center leading-normal">
-<code>C/C++ → LLVM → Emscripten → JavaScript (asm.js)</code>
-</div>
+```
+C/C++ → LLVM → Emscripten → JavaScript (asm.js)
+```
 
 Check out the slides for [Alon's "Compiling to JavaScript" talk](http://kripken.github.io/mloc_emscripten_talk) and his CppCon 2014 [talk on Emscripten and asm.js](https://www.youtube.com/watch?v=JhMlWj4tCDo) to learn more. With asm.js, we now had the beginnings of an [assembly language for the web](http://www.hanselman.com/blog/JavaScriptIsWebAssemblyLanguageAndThatsOK.aspx), which could be standardized and integrated into every browser, and that's exactly what happened. In 2015, [cross-browser work started on WebAssembly](https://blog.mozilla.org/luke/2015/06/17/webassembly) to further define a portable, efficient binary instruction format and safe virtual machine for the web. (See also Brendan Eich's post, ["From ASM.JS to WebAssembly"](https://brendaneich.com/2015/06/from-asm-js-to-webassembly)). In just over two years, the community developed a specification, iterated on prototypes, wrangled the biggest companies responsible for the web platform, and [shipped WebAssembly in all major browsers](https://blog.mozilla.org/blog/2017/11/13/webassembly-in-browsers). This is a monumental achievement which is hard to overstate. Perhaps, this is the way it should have been from the beginning, the browser providing a low-level compilation target where any number of languages could be used to program the web, and existing native tools, libraries, and applications could be brought along as well. Then again, who could've predicted what the web was to become and the demands placed on today's browser. Nevertheless, we can be happy it's here now and look forward to the potential it holds. See why Mozilla thinks [WebAssembly is a game changer for the web](https://medium.com/mozilla-tech/why-webassembly-is-a-game-changer-for-the-web-and-a-source-of-pride-for-mozilla-and-firefox-dda80e4c43cb). If you'd like to play around with it right now in the browser, check out [WebAssembly Studio](https://hacks.mozilla.org/2018/04/sneak-peek-at-webassembly-studio).
 
@@ -44,9 +45,9 @@ If you're not yet familiar with [MRuby](http://mruby.org), you really should be.
 
 Along with a rethinking of the interpreter architecture, MRuby also opens up some new possibilities, one of which is particularly interesting to us here: the ability to compile Ruby scripts to native code. This is a boon for distribution. Being able to create a single, small binary of your app means Ruby becomes ultra portable. Projects like [mruby-cli](https://github.com/hone/mruby-cli) make it easy to produce standalone executables for all major platforms from any machine. We can also embed MRuby bytecode directly into a C program, which we can then compile with [clang](https://clang.llvm.org), the LLVM frontend for the C language family. The compilation flow looks like this:
 
-<div class="text-center leading-normal">
-<code>Ruby script → MRuby bytecode → C → clang → LLVM → native executable</code>
-</div>
+```
+Ruby script → MRuby bytecode → C → clang → LLVM → native executable
+```
 
 Are you getting the idea?
 
@@ -54,9 +55,9 @@ Are you getting the idea?
 
 If we can target LLVM, we then have a path to WebAssembly. Recall that Emscripten is an LLVM-to-JavaScript compiler. In 2015, Emscripten started gaining the ability to compile to WebAssembly, which means our path from Ruby looks like this:
 
-<div class="text-center leading-normal">
-<code>Ruby script → MRuby bytecode → C → emcc (Emscripten Compiler Frontend) → LLVM → Binaryen → WebAssembly</code>
-</div>
+```
+Ruby script → MRuby bytecode → C → emcc (Emscripten Compiler Frontend) → LLVM → Binaryen → WebAssembly
+```
 
 It looks a little crazy, but it's all starting to come together! One new thing here in the flow is [Binaryen](https://github.com/WebAssembly/binaryen), which is a compiler and toolchain infrastructure library for WebAssembly (its name comes from combining "binary" with "Emscript**en**"). Alon also gave a talk on [compiling to WebAssembly with Binaryen](https://kripken.github.io/talks/binaryen.html).
 
@@ -197,7 +198,7 @@ ruby -run -ehttpd . -p8000
 
 This will start a simple web server and serve up static files in the current directory on port 8000. View our HTML file by going to [`http://localhost:8000/hello_ruby.html`](http://localhost:8000/hello_ruby.html). Open up the web console and you'll see "Hello Ruby!" 🎉
 
-<img class="block my-8 w-full mx-auto rounded-lg shadow-[0_0_4px_2px_rgba(0,0,0,0.2)]" style="max-width: 612px" src="/assets/blog/ruby-on-webassembly/ruby-on-webassembly.png">
+<img class="block my-8 w-full mx-auto rounded-lg shadow-[0_0_4px_2px_rgba(0,0,0,0.2)]" style="max-width: 612px" src="/assets/blog/ruby-on-webassembly/ruby-on-webassembly.png" width="1224" height="732" loading="lazy" decoding="async" alt="Three overlapping windows: an editor showing hello_ruby.rb containing puts &quot;Hello Ruby!&quot;, an editor showing that script embedded in hello_ruby.c as an array of hex bytes, and a browser console printing Hello Ruby!">
 
 (Since people have asked, I use Atom with the [City Lights theme](http://citylights.xyz). 😍)
 
@@ -207,7 +208,9 @@ That was a bit of work, so I've got something to make your experimentation a lit
 
 This entire build process above has been put inside a gem. Get it with:
 
-`gem install wasm`
+```
+gem install wasm
+```
 
 To use the gem, you must first have the [WebAssembly toolchain](http://webassembly.org/getting-started/developers-guide/) set up, with `emcc` and `emar` available on the command line. Then, you'll be able to use the `ruby-wasm` utility to compile Ruby scripts to a WebAssembly binary, and generate the aforementioned JavaScript and HTML files with ease. You can then serve the HTML page with `ruby-wasm serve`. Check out the [gem repository on GitHub](https://github.com/blacktm/ruby-wasm) for all the details.
 
@@ -229,6 +232,6 @@ Lastly, I'll just say that the line between what a "native" and "web" app will c
 
 ## Thanks!
 
-I hope this foray into Ruby on WebAssembly was informative, and you have fun playing around with the `wasm` gem. If you want to leave a comment, you can [reply to the tweet](https://twitter.com/blacktm/status/990475857721413633) announcing this post. If you have ideas for the gem, or just want to explore ideas, feel free to [open an issue](https://github.com/blacktm/ruby-wasm/issues). And as always, you can [email me](mailto:tom@blacktm.com).
+I hope this foray into Ruby on WebAssembly was informative, and you have fun playing around with the `wasm` gem. If you have ideas for the gem, or just want to explore ideas, feel free to [open an issue](https://github.com/blacktm/ruby-wasm/issues). And as always, you can [email me](mailto:tom@blacktm.com).
 
 👋

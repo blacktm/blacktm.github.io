@@ -7,21 +7,25 @@ style: slides
 
 Welcome! Below is my talk from RubyConf 2017, ["Reimagining 2D graphics and game development with Ruby"](http://rubyconf.org/program#session-189), presented on November 15th, 2017. It's hard to hear due to audio issues, but you can jump to the slides and notes just below the video. Want to get right to making 2D apps? Check out [Ruby 2D](http://www.ruby2d.com)! If you're interested in contributing, we'd love to have you [get involved](https://github.com/ruby2d/ruby2d#contribute) with the project.
 
-<div class="text-center pt-4 pb-8 border-b-4 border-white/10">
-  <iframe class="w-full" style="max-width:640px; height:360px" src="https://www.youtube.com/embed/-PPVypAS_Pc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<div class="text-center pt-4 pb-8 border-b border-white/20">
+  <iframe class="w-full" style="max-width:640px; height:360px"
+          src="https://www.youtube-nocookie.com/embed/-PPVypAS_Pc"
+          title="Reimagining 2D graphics and game development with Ruby — RubyConf 2017"
+          loading="lazy"
+          allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          allowfullscreen></iframe>
 </div>
 
 ## Slides, notes, and links
 
-<link rel="stylesheet" href="/assets/css/progressive-image.min.css">
-<script src="/assets/js/progressive-image.min.js"></script>
-
 <section class="mx-auto">
   {% for slide in site.data.rubyconf_2017_slides %}
-  <article id="slide-{% increment slide_num %}" class="lg:flex pb-8 border-b-4 border-white/10">
+  <article id="slide-{{ forloop.index0 }}" class="lg:flex pb-8 border-b border-white/20">
     <div class="lg:w-1/2">
-      <a href="/assets/rubyconf/{{ slide_num | minus: 1 }}.png" class="progressive replace">
-        <img src="/assets/rubyconf/tiny.png" class="preview">
+      <a href="/assets/rubyconf/{{ forloop.index0 }}.png">
+        <img src="/assets/rubyconf/{{ forloop.index0 }}.png" class="w-full h-auto"
+             width="1600" height="900" decoding="async" alt=""
+             {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
       </a>
     </div>
     <div class="lg:w-1/2">
