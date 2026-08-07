@@ -1,6 +1,10 @@
 ---
 title: RubyConf 2017
 style: slides
+date: 2017-11-15
+listed: true
+list_title: Reimagining 2D graphics and game development with Ruby
+list_blurb: RubyConf 2017
 ---
 
 # RubyConf 2017

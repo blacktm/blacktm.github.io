@@ -32,22 +32,24 @@ permalink: /
 
 <h2 class="section-label">Writing &amp; Talks</h2>
 
-<div class="items">
-  <div class="item">
-    <div class="item-row">
-      <h3><a href="/blog/ruby-on-webassembly">Ruby on WebAssembly</a></h3>
-      <span class="item-date">2018-04</span>
-    </div>
-    <p>What's the big deal with WebAssembly, and what does it mean for Ruby?</p>
-  </div>
+{% comment %}
+  Posts, plus any page opting in with `listed: true` (e.g. talks), merged and
+  sorted newest first. Pages need an explicit `date` — undated ones fall back to
+  the build time and would pin themselves to the top.
+{% endcomment %}
+{% assign listed_pages = site.pages | where: "listed", true %}
+{% assign entries = site.posts | concat: listed_pages | sort: "date" | reverse %}
 
+<div class="items">
+  {% for entry in entries %}
   <div class="item">
     <div class="item-row">
-      <h3><a href="/rubyconf">Reimagining 2D graphics and game development with Ruby</a></h3>
-      <span class="item-date">2017-11</span>
+      <h3><a href="{{ entry.url }}">{{ entry.list_title | default: entry.title }}</a></h3>
+      <span class="item-date">{{ entry.date | date: "%Y-%m" }}</span>
     </div>
-    <p>RubyConf 2017</p>
+    <p>{{ entry.list_blurb | default: entry.description }}</p>
   </div>
+  {% endfor %}
 </div>
 
 <script src="/assets/js/alive.js" defer></script>

@@ -311,6 +311,13 @@
     background: var(--line);
   }
 
+  /* The first label sits below the hero and wants the full gap. Later ones
+     follow a list that already ends in its own padding, so they need less. */
+
+  .home .items + .section-label {
+    margin-top: 3rem;
+  }
+
   /* Home — project and writing items */
 
   .home .items .item {
@@ -518,6 +525,58 @@
       margin-right: 0;
       max-width: 100%;
       width: 100%;
+    }
+  }
+
+  /* Captioned figures. The bare `img` rule above bleeds 2rem either side;
+     these reset that and let the figure own its own width instead. */
+
+  .post-content figure {
+    margin: 2.5rem 0;
+  }
+
+  .post-content figure img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border: 1px solid var(--line-soft);
+    border-radius: 0.5rem;
+  }
+
+  /* Click through to the full-size file — same trick as the slides pages */
+
+  .post-content figure a {
+    display: block;
+    cursor: zoom-in;
+  }
+
+  .post-content figure a:hover {
+    background: none;
+  }
+
+  .post-content figcaption {
+    margin-top: 0.875rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--meta);
+    text-align: center;
+  }
+
+  /* `.wide` breaks out of the text column once there's room beside it.
+     The column is 48rem centered, so at 60em there's 6rem of slack per
+     side and at 80em there's 16rem — stay inside that and nothing clips. */
+
+  @media (min-width: 60em) {
+    .post-content figure.wide {
+      margin-inline: -5rem;
+    }
+  }
+
+  @media (min-width: 80em) {
+    .post-content figure.wide {
+      margin-inline: -10rem;
     }
   }
 }

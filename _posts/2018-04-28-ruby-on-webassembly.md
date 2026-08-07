@@ -198,7 +198,7 @@ ruby -run -ehttpd . -p8000
 
 This will start a simple web server and serve up static files in the current directory on port 8000. View our HTML file by going to [`http://localhost:8000/hello_ruby.html`](http://localhost:8000/hello_ruby.html). Open up the web console and you'll see "Hello Ruby!" 🎉
 
-<img class="block my-8 w-full mx-auto rounded-lg shadow-[0_0_4px_2px_rgba(0,0,0,0.2)]" style="max-width: 612px" src="/assets/blog/ruby-on-webassembly/ruby-on-webassembly.png" width="1224" height="732" loading="lazy" decoding="async" alt="Three overlapping windows: an editor showing hello_ruby.rb containing puts &quot;Hello Ruby!&quot;, an editor showing that script embedded in hello_ruby.c as an array of hex bytes, and a browser console printing Hello Ruby!">
+<img class="block my-8 w-full mx-auto rounded-lg" style="max-width: 612px" src="/assets/blog/ruby-on-webassembly/ruby-on-webassembly.png" width="1224" height="732" loading="lazy" decoding="async" alt="Three overlapping windows: an editor showing hello_ruby.rb containing puts &quot;Hello Ruby!&quot;, an editor showing that script embedded in hello_ruby.c as an array of hex bytes, and a browser console printing Hello Ruby!">
 
 (Since people have asked, I use Atom with the [City Lights theme](http://citylights.xyz). 😍)
 
